@@ -1,2 +1,2 @@
 #!/bin/bash
-[ "$(stat -c %U hello)" == "guillaume" ] chown betty hello
+if [ $(id -u) != $(id -u guillaume) ]; then exit; else chown betty hello; fi
