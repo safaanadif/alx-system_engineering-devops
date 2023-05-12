@@ -1,2 +1,2 @@
 #!/bin/bash
-if [ $(id -u) != $(id -u guillaume) ]; then ( exit ); else ( chown betty hello ); fi
+chown --from=guillaume betty hello
